@@ -1,0 +1,28 @@
+5) count the number of lines in a string
+
+using System;
+namespace practice_code2
+{
+class program
+{
+   static void Main(string[]args)
+{
+  long l = countstring("My name is Nikita");
+  Console.WriteLine("number of lines in the string: {0}",l);
+Console.ReadLine();
+
+}
+
+static long countstring(string s)
+{
+long count = 1;
+int start = 0;
+while((start=s.IndexOf('\n',start)) != -1)
+{
+count++;
+
+start++;
+}
+return count;
+}
+}
