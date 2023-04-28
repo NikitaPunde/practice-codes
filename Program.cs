@@ -1,15 +1,14 @@
 ﻿using System;
 
-namespace test_code
+namespace test
 {
     class Program
     {
-        static void Main(string[] args)
+         static void Main(string[] args)
         {
-            for (int i = 0; i < 11; i++)
-            {
-                Console.WriteLine(i);
-            }
+        employee emp = new employee(1, "Nikita", 20000);
+        emp.Display();
         }
     }
 }
+
