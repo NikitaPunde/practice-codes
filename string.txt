@@ -1,0 +1,17 @@
+4) calculate the length of a string
+
+using System;
+
+
+namespace practice_code2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string s = "Nikita";
+
+            Console.WriteLine("The Length of the String is: " +s.Length);
+        }
+    }
+}
