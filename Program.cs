@@ -1,21 +1,22 @@
 ﻿using System;
 
-namespace code
+namespace code_test
 {
-    public class program
+    class Program
     {
+        
 
-        public static void Main(string[] args)
-        {
-
-            string a = "abcdefghijklmnopqrst";
-            for (int i = 0; i < a.Length; i = i + 2)
+            public static void Main(string[] args)
             {
 
-            Console.WriteLine(a[i]);
-            
+                string a = "abcdefghijklmnopqrst";
+                for (int i = 0; i < a.Length; i = i + 2)
+                {
+
+                    Console.WriteLine(a[i]);
+
+                }
             }
         }
-      }
-  }
+    }
 
