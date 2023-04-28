@@ -1,14 +1,21 @@
 ﻿using System;
 
-namespace test
+namespace code
 {
-    class Program
+    public class program
     {
-         static void Main(string[] args)
+
+        public static void Main(string[] args)
         {
-        employee emp = new employee(1, "Nikita", 20000);
-        emp.Display();
+
+            string a = "abcdefghijklmnopqrst";
+            for (int i = 0; i < a.Length; i = i + 2)
+            {
+
+            Console.WriteLine(a[i]);
+            
+            }
         }
-    }
-}
+      }
+  }
 
