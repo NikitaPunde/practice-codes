@@ -1,0 +1,21 @@
+delegates -
+
+using System;
+namespace ConsoleApplication
+{
+public delegate void Calculation(int a,int b);
+ class program
+{
+public static void Addition(int a, int b);
+{
+int result =  a+b;
+Console.WriteLine("Addition of the result: {0}",result);
+}
+static void Main(sring[]args)
+{
+Calculation obj = new Calculation(program.Addition);
+obj(20,10);
+Console.ReadLine();
+}
+}
+}
