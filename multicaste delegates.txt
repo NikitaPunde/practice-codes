@@ -1,0 +1,33 @@
+using System;
+
+namespace multicaste_delegates
+{
+    public delegate void Calculation(int x, int y);
+    class Program
+    {
+        public static void Addition(int x, int y)
+        {
+            int result = x + y;
+            Console.WriteLine("Addition result is {0}", result);
+        }
+        public static void Substraction(int x, int y)
+        {
+            int result = x - y;
+            Console.WriteLine("Substraction result is {0}", result);
+        }
+        public static void Multiplication(int x, int y)
+        {
+            int result = x * y;
+            Console.WriteLine("Multiplication result is {0}", result);
+        }
+        static void Main(string[] args)
+        {
+            Calculation obj = new Calculation(Addition);
+            obj += Substraction;
+            obj += Multiplication;
+            obj(78, 56);
+            
+            Console.ReadLine();
+        }
+    }
+}
