@@ -1,0 +1,60 @@
+using System;
+
+namespace multiple_delegates
+{
+    public delegate void Calculation(int a, int b);
+    public delegate void Show_delegate();
+    public delegate void Calculate(int num);
+    class program
+    {
+        public static void Square(int num)
+        {
+            int square = num*num;
+            Console.WriteLine(" Square of {0} is {1}", num , square);
+        }
+        public static void Cube(int num)
+        {
+            int cube = num*num*num;
+            Console.WriteLine("Cube of {0} is {1}", num, cube);
+        }
+        public static void Show()
+        {
+
+            Console.WriteLine("This is a show method !!");
+
+        }
+        public static void Addition(int a, int b)
+        {
+            int result = a + b;
+            Console.WriteLine("Addition result is {0}", result);
+        }
+        public static void Substraction(int a, int b)
+        {
+            int result = a - b;
+            Console.WriteLine("Substraction result is {0}", result);
+        }
+        public static void Multiplication(int a, int b)
+        {
+            int result = a * b;
+            Console.WriteLine("Multiplication result is {0}", result);
+        }
+        static void Main(string[] args)
+        {
+
+            Calculate obj = new Calculate(Square);
+            obj.Invoke(23);
+
+            obj = Cube;
+            obj.Invoke(56);
+
+            //Show_delegate obj = new Show_delegate(Show);
+            //obj.Invoke();
+
+
+            //Calculation obj = new Calculation(Addition);
+            //obj(56,89);
+
+            Console.ReadLine();
+    }
+    }
+}
